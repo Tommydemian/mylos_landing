@@ -18,6 +18,8 @@ import {
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { scrollFadeIn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function NosotrosPage() {
 	const router = useRouter();
@@ -58,28 +60,19 @@ export default function NosotrosPage() {
 		},
 	];
 
-	const scrollFadeIn = {
-		hidden: { opacity: 0, y: 30 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
-		},
-	};
-
 	return (
 		<div className="min-h-screen bg-background">
 			<Header />
 			<main className="mx-auto max-w-[1000px] px-6 py-16 md:py-24">
 				{/* Back button */}
-				<a
+				<Link
 					href="/"
 					onClick={handleGoHome}
 					className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8 cursor-pointer"
 				>
 					<ArrowLeft className="h-4 w-4" />
 					Volver al inicio
-				</a>
+				</Link>
 
 				{/* Hero header */}
 				<motion.div

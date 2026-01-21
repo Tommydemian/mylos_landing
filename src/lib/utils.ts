@@ -10,7 +10,7 @@ export const heroFadeIn = {
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
+		transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const },
 	},
 };
 
@@ -23,7 +23,7 @@ export const phoneVariants = {
 		transition: {
 			duration: 0.7,
 			delay: 0.5 + i * 0.15,
-			ease: [0.25, 0.4, 0.25, 1],
+			ease: [0.25, 0.4, 0.25, 1] as const,
 		},
 	}),
 };
@@ -33,7 +33,7 @@ export const scrollFadeIn = {
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
+		transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] as const },
 	},
 };
 
@@ -45,7 +45,7 @@ export const cardVariants = {
 		transition: {
 			duration: 0.5,
 			delay: i * 0.1,
-			ease: [0.25, 0.4, 0.25, 1],
+			ease: [0.25, 0.4, 0.25, 1] as const,
 		},
 	}),
 };
