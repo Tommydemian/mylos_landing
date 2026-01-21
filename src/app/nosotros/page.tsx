@@ -147,6 +147,7 @@ export default function NosotrosPage() {
 						<div className="space-y-8 md:space-y-0">
 							{timelineSteps.map((step, index) => (
 								<div
+									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 									key={step.year + index}
 									className={`md:flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
 								>

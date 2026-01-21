@@ -10,6 +10,7 @@ import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { scrollFadeIn } from "@/lib/utils";
 
 export default function PoliticasDeCalidadPage() {
 	const router = useRouter();
@@ -24,15 +25,6 @@ export default function PoliticasDeCalidadPage() {
 		setTimeout(() => {
 			window.scrollTo({ top: 0, behavior: "instant" });
 		}, 100);
-	};
-
-	const scrollFadeIn = {
-		hidden: { opacity: 0, y: 30 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
-		},
 	};
 
 	return (
