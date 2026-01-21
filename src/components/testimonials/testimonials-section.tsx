@@ -49,6 +49,7 @@ export const TestimonialsSection = () => {
 							viewport={{ once: true, margin: "-50px" }}
 							variants={cardVariants}
 							className="bg-card border border-border rounded-xl p-6"
+							// className="bg-card border-l-4 border-l-primary border border-border rounded-xl p-6"
 						>
 							<p className="text-sm text-foreground leading-relaxed mb-5">
 								{testimonial.quote}
