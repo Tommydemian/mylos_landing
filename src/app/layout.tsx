@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -47,6 +48,8 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<main>{children}</main>
+				{/* biome-ignore lint/style/noNonNullAssertion: <explanation> */}
+				<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
 				<Analytics />
 				<Toaster />
 			</body>
