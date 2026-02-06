@@ -135,9 +135,9 @@ export const ProposalForm = () => {
 				</Button>
 				{!state.ok && <p className="text-sm">{state.error}</p>}
 			</form>
-			<p className="text-xs text-muted-foreground text-center mt-4">
+			{/* <p className="text-xs text-muted-foreground text-center mt-4">
 				Sin compromiso. Te contactamos en 24-48hs.
-			</p>
+			</p> */}
 		</motion.div>
 	);
 };

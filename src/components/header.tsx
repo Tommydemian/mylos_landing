@@ -66,7 +66,7 @@ export function Header() {
 
 						{/* Desktop Links */}
 						<div className="hidden items-center gap-8 md:flex">
-							<Link
+							{/* <Link
 								href="/#funcionalidades"
 								onClick={(e) => handleNavClick(e, "funcionalidades")}
 								className="text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-primary cursor-pointer"
@@ -79,7 +79,7 @@ export function Header() {
 								className="text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-primary cursor-pointer"
 							>
 								Testimonios
-							</Link>
+							</Link> */}
 							<Link
 								href="/#faq"
 								onClick={(e) => handleNavClick(e, "faq")}
