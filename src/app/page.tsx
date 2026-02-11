@@ -178,6 +178,7 @@ import { BulletsSection } from "@/components/bullets/bullets-section";
 import Footer from "@/components/footer";
 import { WhatsAppSectionCTA } from "@/components/whatsapp-section-cta/whatsapp-section-cta";
 import { HeroSection } from "@/components/hero/hero-section";
+import { WhatsAppWidget } from "@/components/whatsapp-widget";
 // const heroFadeIn = {
 // 	hidden: { opacity: 0, y: 12 },
 // 	visible: {
@@ -205,13 +206,15 @@ const bullets = [
 export default function Home() {
 	return (
 		<div>
-			<Header />
-
-			<HeroSection />
-			<BulletsSection />
-			<ProposalSection />
-			{/* <WhatsAppSectionCTA /> */}
-			<Footer />
+			<div>
+				<Header />
+				<HeroSection />
+				<BulletsSection />
+				<ProposalSection />
+				{/* <WhatsAppSectionCTA /> */}
+				<Footer />
+			</div>
+			<WhatsAppWidget />
 		</div>
 	);
 }

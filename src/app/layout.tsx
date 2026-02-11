@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import WhatsAppWidget from "@/components/whatsapp-widget";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",

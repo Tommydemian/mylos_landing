@@ -26,24 +26,24 @@ export function Header() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	const handleNavClick = (
-		e: React.MouseEvent<HTMLAnchorElement>,
-		sectionId: string,
-	) => {
-		e.preventDefault();
-		setIsMobileMenuOpen(false);
+	// const handleNavClick = (
+	// 	e: React.MouseEvent<HTMLAnchorElement>,
+	// 	sectionId: string,
+	// ) => {
+	// 	e.preventDefault();
+	// 	setIsMobileMenuOpen(false);
 
-		if (pathname === "/") {
-			// Si estamos en la página principal, hacer scroll directamente
-			const element = document.getElementById(sectionId);
-			if (element) {
-				element.scrollIntoView({ behavior: "smooth" });
-			}
-		} else {
-			// Si estamos en otra página, navegar a la principal y luego al hash
-			router.push(`/#${sectionId}`);
-		}
-	};
+	// 	if (pathname === "/") {
+	// 		// Si estamos en la página principal, hacer scroll directamente
+	// 		const element = document.getElementById(sectionId);
+	// 		if (element) {
+	// 			element.scrollIntoView({ behavior: "smooth" });
+	// 		}
+	// 	} else {
+	// 		// Si estamos en otra página, navegar a la principal y luego al hash
+	// 		router.push(`/#${sectionId}`);
+	// 	}
+	// };
 
 	return (
 		<>
@@ -80,7 +80,7 @@ export function Header() {
 							>
 								Testimonios
 							</Link> */}
-							<Link
+							{/* <Link
 								href="/#faq"
 								onClick={(e) => handleNavClick(e, "faq")}
 								className="text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-primary cursor-pointer"
@@ -92,7 +92,7 @@ export function Header() {
 								className="text-sm font-medium text-muted-foreground transition-colors duration-150 hover:text-primary cursor-pointer"
 							>
 								Nosotros
-							</Link>
+							</Link> */}
 						</div>
 
 						{/* Desktop CTA */}
@@ -119,7 +119,7 @@ export function Header() {
 						</div>
 
 						{/* Mobile Hamburger */}
-						<button
+						{/* <button
 							type="button"
 							className="md:hidden text-muted-foreground"
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -130,7 +130,7 @@ export function Header() {
 							) : (
 								<Menu className="h-6 w-6" />
 							)}
-						</button>
+						</button> */}
 					</nav>
 				</div>
 			</motion.header>
@@ -140,7 +140,7 @@ export function Header() {
 				<div className="fixed inset-0 z-40 bg-background md:hidden">
 					<div className="flex h-full flex-col p-6 pt-20">
 						<div className="flex flex-col space-y-0">
-							<Link
+							{/* <Link
 								href="/#funcionalidades"
 								className="border-b border-border py-3 text-base font-medium text-foreground cursor-pointer"
 								onClick={(e) => handleNavClick(e, "funcionalidades")}
@@ -167,7 +167,7 @@ export function Header() {
 								onClick={() => setIsMobileMenuOpen(false)}
 							>
 								Nosotros
-							</Link>
+							</Link> */}
 						</div>
 
 						<div className="mt-auto pb-6">
