@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { WhatsAppIcon } from "./icons/whatsapp";
 
-const WHATSAPP_NUMBER = "54911149796361";
+const WHATSAPP_NUMBER = "5491149796361";
 const DEFAULT_MESSAGE = "Hola! Me interesa saber más sobre Mylos 👋";
 
 export const WhatsAppWidget = () => {
