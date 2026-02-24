@@ -4,11 +4,19 @@ import mylosLogo from "@/public/images/mylos-logo.svg";
 import { Instagram, Linkedin, Youtube, Mail, Facebook } from "lucide-react";
 
 const socialLinks = [
-	{ href: "https://instagram.com", icon: Instagram, label: "Instagram" },
-	{ href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-	{ href: "https://youtube.com", icon: Youtube, label: "YouTube" },
+	{
+		href: "https://www.instagram.com/mylos.app/",
+		icon: Instagram,
+		label: "Instagram",
+	},
+	// { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
+	{
+		href: "https://www.youtube.com/@MylosApp",
+		icon: Youtube,
+		label: "YouTube",
+	},
 	{ href: "mailto:tomasgilamoedo@gmail.com", icon: Mail, label: "Email" },
-	{ href: "https://facebook.com", icon: Facebook, label: "Facebook" },
+	// { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
 ];
 
 const legalLinks = [

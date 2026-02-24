@@ -127,11 +127,7 @@ export const ProposalForm = () => {
 					className="w-full mt-2"
 					disabled={isPending || state.ok}
 				>
-					{isPending
-						? "Enviando…"
-						: state.ok
-							? "Enviado ✓"
-							: "Quiero acceso anticipado"}
+					{isPending ? "Enviando…" : state.ok ? "Enviado ✓" : "Probalo ahora"}
 				</Button>
 				{!state.ok && <p className="text-sm">{state.error}</p>}
 			</form>

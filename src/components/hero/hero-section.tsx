@@ -18,7 +18,7 @@ export const HeroSection = () => {
 						className="text-3xl md:text-5xl font-bold tracking-tight text-balance"
 						style={{ letterSpacing: "-0.02em" }}
 					>
-						¿Qué tan seguro estás de cuánto ganaste este mes?
+						Si te cobran para enseñarte a usarlo, el diseño falló.
 					</motion.h1>
 
 					<motion.p
@@ -33,8 +33,8 @@ export const HeroSection = () => {
 						}}
 						className="text-base md:text-lg text-muted-foreground text-balance max-w-xl mx-auto"
 					>
-						MYLOS te muestra tu ganancia real en todo momento. Facturá, controlá
-						stock, operá desde el celular.
+						MYLOS es gestión real — facturación, stock y ventas — sin curva de
+						aprendizaje. Lo abrís y funciona.
 					</motion.p>
 
 					<motion.p
@@ -96,13 +96,13 @@ export const HeroSection = () => {
 						className="w-full max-w-sm h-12 text-base font-semibold gap-2"
 					>
 						<a href="#beta">
-							Quiero acceso anticipado
+							probalo ahora
 							<ArrowRight className="w-4 h-4" />
 						</a>
 					</Button>
-					<p className="text-xs text-muted-foreground">
+					{/* <p className="text-xs text-muted-foreground">
 						Acceso en menos de 24hs · Sin tarjeta de crédito
-					</p>
+					</p> */}
 				</motion.div>
 			</div>
 		</section>
