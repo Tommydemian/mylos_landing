@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { heroFadeIn } from "@/lib/utils";
+import { DemoVideo } from "./demo-video";
 
 export const HeroSection = () => {
 	return (
@@ -53,29 +54,9 @@ export const HeroSection = () => {
 					</motion.p>
 				</div>
 
-				{/* Video */}
-				<motion.div
-					initial="hidden"
-					animate="visible"
-					variants={{
-						...heroFadeIn,
-						visible: {
-							...heroFadeIn.visible,
-							transition: { ...heroFadeIn.visible.transition, delay: 0.2 },
-						},
-					}}
-					className="flex justify-center"
-				>
-					<div className="bg-foreground rounded-xl p-2.5 shadow-lg">
-						<iframe
-							title="Mylos Demo"
-							src="https://www.youtube.com/embed/waiDCqs2_BE"
-							className="w-60 md:w-72 aspect-[9/16] rounded-lg"
-							allow="autoplay; encrypted-media"
-							allowFullScreen
-						/>
-					</div>
-				</motion.div>
+				<div className="flex justify-center items-center">
+					<DemoVideo />
+				</div>
 
 				{/* CTA — prominent */}
 				<motion.div
