@@ -29,7 +29,7 @@ export function RegisterForm() {
 	}
 
 	return (
-		<form action={action} className="space-y-4">
+		<form action={action} className="space-y-4 max-w-2xl mx-auto mt-16">
 			{state.errors?.server && (
 				<p className="text-sm text-destructive text-center">
 					{state.errors.server}
