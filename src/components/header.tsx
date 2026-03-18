@@ -1,21 +1,15 @@
 "use client";
 
-import type React from "react";
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
 import mylosLogo from "@/public/images/mylos-logo.svg";
 
 export function Header() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const router = useRouter();
-	const pathname = usePathname();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -25,25 +19,6 @@ export function Header() {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
-
-	// const handleNavClick = (
-	// 	e: React.MouseEvent<HTMLAnchorElement>,
-	// 	sectionId: string,
-	// ) => {
-	// 	e.preventDefault();
-	// 	setIsMobileMenuOpen(false);
-
-	// 	if (pathname === "/") {
-	// 		// Si estamos en la página principal, hacer scroll directamente
-	// 		const element = document.getElementById(sectionId);
-	// 		if (element) {
-	// 			element.scrollIntoView({ behavior: "smooth" });
-	// 		}
-	// 	} else {
-	// 		// Si estamos en otra página, navegar a la principal y luego al hash
-	// 		router.push(`/#${sectionId}`);
-	// 	}
-	// };
 
 	return (
 		<>
@@ -101,36 +76,14 @@ export function Header() {
 								whileHover={{ scale: 1.03 }}
 								whileTap={{ scale: 0.98 }}
 							>
-								<Button
-									variant="outline"
-									size="sm"
+								<Link
+									href="/register"
 									className="rounded-[10px] text-sm font-medium bg-transparent"
-									asChild
 								>
-									<a
-										href="https://talos-frontend-tau.vercel.app/login"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										Acceder
-									</a>
-								</Button>
+									Acceder
+								</Link>
 							</motion.div>
 						</div>
-
-						{/* Mobile Hamburger */}
-						{/* <button
-							type="button"
-							className="md:hidden text-muted-foreground"
-							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-							aria-label="Toggle menu"
-						>
-							{isMobileMenuOpen ? (
-								<X className="h-6 w-6" />
-							) : (
-								<Menu className="h-6 w-6" />
-							)}
-						</button> */}
 					</nav>
 				</div>
 			</motion.header>

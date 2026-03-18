@@ -207,12 +207,10 @@ export default function Home() {
 	return (
 		<div>
 			<div>
-				<Header />
 				<HeroSection />
 				<BulletsSection />
 				<ProposalSection />
 				{/* <WhatsAppSectionCTA /> */}
-				<Footer />
 			</div>
 			<WhatsAppWidget />
 		</div>
