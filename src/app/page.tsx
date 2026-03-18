@@ -179,6 +179,8 @@ import Footer from "@/components/footer";
 import { WhatsAppSectionCTA } from "@/components/whatsapp-section-cta/whatsapp-section-cta";
 import { HeroSection } from "@/components/hero/hero-section";
 import { WhatsAppWidget } from "@/components/whatsapp-widget";
+import { Carousel } from "../components/carousel";
+import Image from "next/image";
 // const heroFadeIn = {
 // 	hidden: { opacity: 0, y: 12 },
 // 	visible: {
@@ -187,27 +189,32 @@ import { WhatsAppWidget } from "@/components/whatsapp-widget";
 // 		transition: { duration: 0.5, ease: "easeOut" },
 // 	},
 // };
-
-const bullets = [
-	{
-		icon: Zap,
-		text: "5 minutos de setup, después funciona solo",
-	},
-	{
-		icon: Smartphone,
-		text: "100% desde el celular",
-	},
-	{
-		icon: Link,
-		text: "Se conecta a TiendaNube en un click",
-	},
-];
+// import luminalogo from "@/carousel-images/lumina_logo.webp";
+// import hopelogo from "@/carousel-images/hope_accesorios_logo.webp";
+// import taquarilogo from "@/carousel-images/taquari_logo.webp";
+// import poupeelogo from "@/carousel-images/poupee_logo.png";
+// import electrocanitaslogo from "@/carousel-images/electrocanitas_logo.png";
 
 export default function Home() {
 	return (
 		<div>
 			<div>
 				<HeroSection />
+				{/* <Carousel /> */}
+				{/* <div className="grid grid-cols-5 items-center max-w-[80%] mx-auto">
+					<Image alt="Lumina logo" src={luminalogo} width={200} height={200} />
+					<Image alt="Hope logo" src={hopelogo} width={200} height={200} />
+					<Image alt="Lumina logo" src={taquarilogo} width={200} height={200} />
+					<Image alt="Lumina logo" src={poupeelogo} width={200} height={200} />
+					<Image
+						alt="Lumina logo"
+						src={electrocanitaslogo}
+						width={400}
+						height={400}
+					/>
+				</div> */}
+
+				<Carousel />
 				<BulletsSection />
 				<ProposalSection />
 				{/* <WhatsAppSectionCTA /> */}
